@@ -24,15 +24,24 @@ Traveller.prototype.getModesOfTransport = function () {
 };
 
 Traveller.prototype.getJourneysByTransport = function (transport) {
-
+  const result = this.journeys.filter((value) => {
+    return value.transport === transport;
+  })
+  return result;
 };
 
 Traveller.prototype.getJourneysByMinDistance = function (minDistance) {
-
+  const result = this.journeys.filter((value) =>{
+    return value.distance >= minDistance;
+  })
+  return result;
 };
 
 Traveller.prototype.calculateTotalDistanceTravelled = function () {
-
+const result = this.journeys.reduce((acc, total) =>{
+  return acc + total.distance;
+}, 0)
+return result;
 };
 
 Traveller.prototype.getUniqueModesOfTransport = function () {
