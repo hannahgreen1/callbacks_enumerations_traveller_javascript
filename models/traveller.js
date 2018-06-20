@@ -10,7 +10,10 @@ return result;
 };
 
 Traveller.prototype.getJourneyEndLocations = function () {
-
+  const result = this.journeys.map((location) =>{
+    return location.endLocation
+  })
+return result;
 };
 
 Traveller.prototype.getModesOfTransport = function () {
