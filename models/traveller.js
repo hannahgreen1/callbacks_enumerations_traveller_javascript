@@ -17,7 +17,10 @@ return result;
 };
 
 Traveller.prototype.getModesOfTransport = function () {
-
+  const result = this.journeys.map((value) => {
+    return value.transport
+  })
+  return result;
 };
 
 Traveller.prototype.getJourneysByTransport = function (transport) {
