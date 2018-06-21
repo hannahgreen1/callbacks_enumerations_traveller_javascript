@@ -45,7 +45,7 @@ return result;
 };
 
 Traveller.prototype.getUniqueModesOfTransport = function () {
-const result = this.getModesOfTransport().filter((transport, index, array) => {
+  const result = this.getModesOfTransport().filter((transport, index, array) => {
   return array.indexOf(transport) === index;
   })
 return result;
